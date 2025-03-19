@@ -11,14 +11,7 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors(
-
-
-  origin: "https://bulk-task.vercel.app/", // Allow frontend URL
-  methods: "GET, POST, PUT, DELETE",
-  allowedHeaders: "Content-Type, Authorization",
-  credentials: true
-));
+app.use(cors());
 app.options("*", cors());
 
 app.use(express.json());
